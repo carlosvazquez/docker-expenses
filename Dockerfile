@@ -2,6 +2,7 @@ FROM ruby:3.1.2-slim
 
 RUN apt-get update -qq && apt-get install -yq --no-install-recommends \
     build-essential \
+    vim \
     gnupg2 \
     less \
     git \

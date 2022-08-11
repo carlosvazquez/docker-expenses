@@ -52,7 +52,7 @@ docker-compose up --build
 ## Crear la master key y las credenciales
 Borrar los archivos config/master.key y config/credentials.yml.enc
 ```
-run docker-compose run --rm -e EDITOR=vim web bin/rails credentials:edit
+docker-compose run --rm -e EDITOR=vim web bin/rails credentials:edit
 ```
 
 ## Usar la terminal del contenedor:
