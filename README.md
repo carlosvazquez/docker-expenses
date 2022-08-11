@@ -17,6 +17,7 @@ Esta plantilla contiene RoR 7 con PostgreSQL, importmaps, turbo, stimulus, redis
 ## Setup inicial
 ```
 cp .env.example .env
+cp config/database.yml.sample config/database.yml
 docker-compose build
 docker-compose run --rm web bin/rails db:setup
 ```
