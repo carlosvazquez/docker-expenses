@@ -1,71 +1,65 @@
-# Ruby on Rails 7 on Docker to Expenses Course
+# Ruby on Rails 7 en Docker para Expenses
 
-This boilerplate contains RoR 7 with PostgreSQL, import maps, turbo, stimulus, redis, and tailwind, all running in Docker.
+Esta plantilla contiene RoR 7 con PostgreSQL, importmaps, turbo, stimulus, redis y tailwind, corriendo en Docker.
 
-**NOTE:** There is example has in mind Windows users
+**NOTA:** Esta plantilla está pensada en usuarios Windows.
 
-## Features
+## Opciones
 * Rails 7.0.3
 * Ruby 3.1.2
-* Dockerfile and Docker Compose configuration
-* PostgreSQL database
+* Dockerfile y configuración Docker Compose
+* base de datos PostgreSQL
 * Redis
-* Rubocop for linting
-* Security checks with [Brakeman](https://github.com/presidentbeef/brakeman)
-* Gems audit with [bundler-audit](https://github.com/rubysec/bundler-audit)
+* Rubocop para linting
+* Seguridad con [Brakeman](https://github.com/presidentbeef/brakeman)
+* Autidoría de las gemas con Audit [bundler-audit](https://github.com/rubysec/bundler-audit)
 
-## Initial setup
+## Setup inicial
 ```
 cp .env.example .env
 docker-compose build
 docker-compose run --rm web bin/rails db:setup
 ```
 
-## Running the Rails app
+## Iniciar la aplicación Rails
 ```
 docker-compose up
 ```
 
-## Running the Rails console
-When the app is already running with `docker-compose` up, attach to the container:
+## Correr la consola de Rails
+Una vez corriendo el app con `docker-compose up` puedes enlazar la terminal con el contenedor:
 ```
 docker-compose exec web bin/rails c
 ```
 
-When no container running yet, start up a new one:
+Si no hay contenedor corriendo puedes usar:
 ```
 docker-compose run --rm web bin/rails c
 ```
 
-## Running tests
+## Correr tests
 ```
 docker-compose run --rm web bin/rspec
 ```
 
-## Updating gems
+## Actualizar gemas
 ```
 docker-compose run --rm web bundle update
 docker-compose up --build
 ```
 
-## Create master key and credentials
+## Crear la master key y las credenciales
+Borrar los archivos config/master.key y config/credentials.yml.enc
 ```
-Remove config/master.key and config/credentials.yml.enc
-
 run docker-compose run --rm -e EDITOR=vim web bin/rails credentials:edit
 ```
 
-## Production build
-```
-docker build -f production.Dockerfile .
-```
-
-## Access to terminal inside docker container
+## Usar la terminal del contenedor:
 ```
 docker-compose exec web bash
 ```
 
-### Rails with Docker inspiration
+### Inspiración, configuración e ideas sobre Rails con Docker
 * [Quickstart: Compose and Rails](https://docs.docker.com/compose/rails/)
 * [Docker for Rails Developers
 Build, Ship, and Run Your Applications Everywhere](https://pragprog.com/titles/ridocker/docker-for-rails-developers/)
