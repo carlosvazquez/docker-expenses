@@ -1,0 +1,22 @@
+es:
+  activerecord:
+    models:
+      account:
+        one: Cuenta
+        other: Cuentas
+
+    attributes:
+      account:
+        reference: No. de cuenta
+        entity: Banco
+        alias: Nombre corto
+        description: Descripción
+
+    errors:
+      models:
+        account:
+          attributes:
+            reference:
+              blank: es requerido para registrar su cuenta
+            entity:
+              blank: o entidad de crédito es requerido
