@@ -1,0 +1,3 @@
+web: bin/rails server -p 
+css: bin/rails dartsass:watch
+css: bin/rails tailwindcss:watch
