@@ -15,10 +15,27 @@ Esta plantilla contiene RoR 7 con PostgreSQL, importmaps, turbo, stimulus, redis
 * Audidoría de las gemas con Audit [bundler-audit](https://github.com/rubysec/bundler-audit)
 
 ## Setup inicial
+Desde tu terminal deberás primero desactivar la conversión de líneas de Windows con el comando
+```
+git config --global core.autocrlf false
+```
+Copiamos nuestro archivo de variables de entorno
 ```
 cp .env.example .env
+```
+
+Copiamos nuestro archivo de configuración para nuestra base de datos
+```
 cp config/database.yml.sample config/database.yml
+```
+
+Inicializamos nuestro contenedor
+```
 docker-compose build
+```
+
+Generamos y preparamos nuestra de base de datos
+```
 docker-compose run --rm web bin/rails db:setup
 ```
 
