@@ -1,0 +1,7 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+account:
+  reference: <%= SecureRandom.random_number.to_s[2..50] %>
+  alias: Ahorro
+  entity: Mi banco
+  description: Cuenta de ahorros personales
