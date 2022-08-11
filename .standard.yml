@@ -1,0 +1,14 @@
+fix: false               # default: false
+parallel: true          # default: false
+format: progress        # default: Standard::Formatter
+default_ignores: false  # default: true
+
+ignore:                 # default: []
+  - 'db/migrate/**/*'
+  - 'db/schema.rb'
+  - 'bin/**/*'
+  - 'Gemfile'
+  - 'config/environments/**/*'
+  - 'config/application.rb'
+  - 'config/boot.rb'
+  - 'config/puma.rb'
