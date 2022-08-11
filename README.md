@@ -12,7 +12,7 @@ Esta plantilla contiene RoR 7 con PostgreSQL, importmaps, turbo, stimulus, redis
 * Redis
 * Rubocop para linting
 * Seguridad con [Brakeman](https://github.com/presidentbeef/brakeman)
-* Autidoría de las gemas con Audit [bundler-audit](https://github.com/rubysec/bundler-audit)
+* Audidoría de las gemas con Audit [bundler-audit](https://github.com/rubysec/bundler-audit)
 
 ## Setup inicial
 ```
@@ -65,3 +65,4 @@ docker-compose exec web bash
 Build, Ship, and Run Your Applications Everywhere](https://pragprog.com/titles/ridocker/docker-for-rails-developers/)
 * [Ruby on Whales:
 Dockerizing Ruby and Rails development](https://evilmartians.com/chronicles/ruby-on-whales-docker-for-ruby-rails-development)
+* [Rails 7 on Docker demo application](https://github.com/ryanwi/rails7-on-docker)
